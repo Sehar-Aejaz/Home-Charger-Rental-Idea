@@ -9,7 +9,7 @@ params = {
     "distance": 10000,  # Search radius in kilometers
     "maxresults": 260,  # Max number of results to return
     "compact": True,
-    "key": "dcfb7363-bec6-4a7c-84b4-681a8082da7e"  
+    "key": "KEY"  
 }
 
 response = requests.get(url, params=params)
