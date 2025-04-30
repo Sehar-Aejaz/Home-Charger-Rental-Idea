@@ -34,6 +34,17 @@ The goal of this project is to:
 - Standardizes and matches suburb names across multiple datasets using fuzzy matching.
 - Merges data to support further analytics (e.g. charger availability vs population/income).
 
+### 5. **PCZ Analysis and Validation**
+- Calculates a **Priority Charging Zone (PCZ) score** for each town using normalized metrics like population, income, motor vehicles per dwelling, and number of existing chargers.
+- Derives additional features:
+  - **Chargers per 1000 people**
+  - **Estimated EV users** (assuming 5% adoption rate)
+- Computes a **final score** by weighing original PCZ score, charger density, and future demand.
+- Visualizes results with:
+  - Bar plots and histograms of charger density and EV demand
+  - **Interactive Folium map** to highlight top PCZs geographically
+- Helps identify high-potential locations for launching the rental platform or pilot programs.
+
 ---
 
 ## Requirements
@@ -44,6 +55,9 @@ Install dependencies via:
 pip install pandas requests beautifulsoup4 selenium fuzzywuzzy python-Levenshtein
 ```
 
+```bash
+pip install pandas requests beautifulsoup4 selenium fuzzywuzzy python-Levenshtein
+```
 Ensure you have [ChromeDriver](https://chromedriver.chromium.org/downloads) installed and available in your system PATH.
 
 ---
@@ -66,3 +80,5 @@ The results of this analysis can be used to:
 - Integrate data-driven insights into **urban planning** or **EV infrastructure** investment.
 
 ---
+
+
